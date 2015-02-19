@@ -1,0 +1,16 @@
+
+ul.inline-list.board-header
+  li
+    a(href="#") L
+  li
+    p #{name}
+  li
+    a(href="#") R
+
+form.new-task
+  input(type="text" name="name" placeholder="Create task")
+
+ul
+  each tasks
+    li.task
+      +task

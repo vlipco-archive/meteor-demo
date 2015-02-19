@@ -1,0 +1,23 @@
+nav.top-bar(data-topbar='', role='navigation')
+  ul.title-area
+    li.name
+      h1
+        a(href='#') Trello Clone
+
+      // Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+      li.toggle-topbar.menu-icon
+        a(href='#')
+          span Menu
+      
+    section.top-bar-section
+    
+      // Right Nav Section
+      ul.right
+        li.active
+          form#new-board
+            ul
+              li
+                input(type="text" name="name" placeholder="Board name")
+              li
+                button.button.tiny Create
+

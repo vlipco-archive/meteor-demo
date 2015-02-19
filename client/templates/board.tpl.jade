@@ -1,14 +1,13 @@
 
-ul.inline-list.board-header
-  li
-    a(href="#") L
-  li
-    p #{name}
-  li
-    a(href="#") R
+div.board-header
+  a.left(href="#") ←
+  a.right(href="#") →
+  p.center #{name}
+  
 
 form.new-task
   input(type="text" name="name" placeholder="Create task")
+  hr
 
 ul
   each tasks

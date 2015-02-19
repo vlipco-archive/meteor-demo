@@ -1,3 +1,7 @@
+body 
+  background-image: url('https://d2hkcehpyog59.cloudfront.net/566ab97d187c40e3aa8da7550d84fc9e613d796a/images/backgrounds/2048/01.jpg')
+  background-size: cover
+  
 #boards
   margin 0 !important
   -ms-flex-align start
@@ -27,6 +31,8 @@
 
 
 .board
+  background: darken(#fff,5%)
+  box-shadow 0 1px 3px rgba(black, 0.9)
   height 100%
   border-radius 3px
   -webkit-box-sizing border-box
@@ -44,12 +50,102 @@
   flex-direction column
   -moz-box-flex 0
   -webkit-box-flex 0
-  -ms-flex 0 0 20%
-  -webkit-flex 0 0 20%
-  flex 0 0 20%
+  -ms-flex 0 0 320px
+  -webkit-flex 0 0 320px
+  flex 0 0 320px
   margin 0 0.5rem
   max-height 100%
   padding 0.5rem
   position relative
   -webkit-transform translate3d(0,0,0)
-  width 20%
+  width 320px
+  overflow-x auto
+  
+  
+  .board-header 
+    position relative
+    display block
+    .center 
+      display block
+      text-align center
+      min-height 25px
+      color darken(white,45%)
+      text-shadow: 0 1px 1px rgba(white, 0.8)
+      text-transform capitalize
+
+    > a 
+      position absolute
+      top 5px
+      font-size 12px 
+      color darken(white, 45%)
+      
+      &:hover 
+        color #5364fb
+
+      &.left 
+        left 5px
+        
+      &.right 
+        right 5px
+      
+  ul 
+    list-style none
+    margin 0
+    padding 0
+    overflow-x auto
+    height 100%
+  
+  .new-task 
+    input 
+      border-radius 4px
+      
+      &:focus
+        box-shadow none
+        border-bottom-radius:0
+        
+        
+        
+
+  .task-content 
+    margin 0px
+    padding 0px
+    background #fff
+    box-shadow 0 1px 1px rgba(black, 0.1)
+    padding 8px 35px
+    box-sizing border-box
+    vertical-align middle
+    border-radius 4px
+    height 100%
+    position relative
+    
+
+    &:hover 
+      a
+        display block
+        opacity 1
+        
+    > a 
+      transition opacity 0.5s ease-in-out
+      display none
+      position absolute
+      top 0
+      opacity:0
+      padding 2px 5px
+      background #f2f2f2
+      border-bottom-left-radius 2px
+      border-bottom-right-radius 2px
+      font-size 10px 
+      color darken(white, 45%)
+      &.left 
+        left 5px
+        
+      &.right 
+        right 5px
+        
+    &:hover 
+      height auto
+    
+    p 
+      margin 0
+      color darken(white, 40%)
+      font-size 14px

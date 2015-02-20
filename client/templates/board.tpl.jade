@@ -1,7 +1,9 @@
 
 div.board-header
-  a.left(href="#") ←
-  a.right(href="#") →
+  if hasLeft
+    a.left(href="#") ←
+  if hasRight
+    a.right(href="#") →
   p.center #{name}
   
 
